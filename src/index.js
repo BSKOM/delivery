@@ -1,4 +1,4 @@
-import app from './assets/app'
-
-console.log('Hello world...');
-app();
+import App from './js/app';
+console.log ('Index started!')
+const app = new App();
+app.start();
