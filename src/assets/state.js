@@ -26,7 +26,7 @@ const state = {
         },
 
     ],
-    cart: [
+    carts: [
         {
             "id": 1001,
             "price": "1500",
