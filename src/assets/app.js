@@ -1,23 +1,39 @@
 import state from './state';
 
+const iam = document.querySelector('.iam');
+
 /* 
 start components event hubs BSKOM (I am)
 https://github.com/BSKOM/eventHBS 
-
 */
 
-const onEvent = (e) => disp(e);
-const eventType = document.querySelectorAll('[event-type]');
-
-const iam = document.querySelector('.iam');
-
-let evHUB = {
-  'shop': shop,  /* function for event shop ('foo':foo) */
-  'good': good   /* function for event good 'foo1':foo1  ... etc*/
+/* 
+******** evHUB HUB *******
+for highlights the structure of functions used to process events: 
+for clear self-documentation next to each property of the object should be
+a comment describing the purpose of the property (function)
+*/
+const evHUB = {
+  'shop': shop,  /* function for select shop ( obj prop 'shop') */
+  'good': good,  /* function for select good ( obj prop 'shop') */
+  'plus': plus,  /* function for event good 'foo1':foo1  ... etc*/
+  'minus': minus,  /* function for event good 'foo1':foo1  ... etc*/
+  'calc': calc  /* function for event good 'foo1':foo1  ... etc*/
 };
 
+/* universal function for all event handlers  */
+const onEvent = (e) => disp(e);
+
+/* selector to create a collection of all active elements for the event handler */
+const eventType = document.querySelectorAll('[event-type]');
+
+/* set an Event Handler to all element of colection */
 [...eventType].map((el) => el.addEventListener(`${el[event-type].value}`, onEvent));
 
+/* 
+******** disp *******
+universal hub dispatcher for processing events (function calls)
+*/
 function disp(evt) {
   const target = evt.target;
   evHUB[target.foo]();
