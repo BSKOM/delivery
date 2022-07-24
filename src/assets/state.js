@@ -28,10 +28,28 @@ const state = {
     ],
     carts: [
         {
-            "id": 1001,
-            "price": "1500",
-            user: 1,
-            count: 1,
+            "user": 1001,
+            "date": Date.now(),
+            "cart": [
+                [
+                    {
+                        "name": "Good1",
+                        "price": "1500",
+                        "ids": 1,
+                        "id": 1001,
+                    },
+                    3
+                ],
+                [            
+                    {
+                        "name": "Good2",
+                        "price": "830",
+                        "ids": 1,
+                        "id": 1002,
+                    },
+                    1
+                ]
+            ],
         }
     ]
 };

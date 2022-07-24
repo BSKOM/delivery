@@ -15,10 +15,10 @@ a comment describing the purpose of the property (function)
 */
 const evHUB = {
   'shop': shop,  /* function for select shop ( obj prop 'shop') */
-  'good': good,  /* function for select good ( obj prop 'shop') */
-  'plus': plus,  /* function for event good 'foo1':foo1  ... etc*/
-  'minus': minus,  /* function for event good 'foo1':foo1  ... etc*/
-  'calc': calc  /* function for event good 'foo1':foo1  ... etc*/
+  'good': good,  /* function for select good ( obj prop 'good') */
+  'plus': plus,  /* function for increnent good ( obj prop 'plus') */
+  'minus': minus,  /* function for decrenent good ( obj prop 'minus') */
+  'calc': calc  /* function for calculate total */
 };
 
 /* universal function for all event handlers  */
